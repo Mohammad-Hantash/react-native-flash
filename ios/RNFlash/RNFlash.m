@@ -53,6 +53,11 @@ RCT_EXPORT_METHOD(turnOffFlash)
     }
 }
 
+RCT_EXPORT_METHOD(turnOnFlashWithLevel:(float)level)
+{
+    [self doFlashWithLevel:level];
+}
+
 - (void)doFakeFlashWithLevel:(float)level
 {
     float acceptedLevel = (level < AVCaptureMaxAvailableTorchLevel ? level : AVCaptureMaxAvailableTorchLevel);
