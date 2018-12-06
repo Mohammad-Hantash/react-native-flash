@@ -1,6 +1,6 @@
 {
   "name": "react-native-flash",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React Native module to turn flash on and off",
   "main": "index.js",
   "scripts": {
