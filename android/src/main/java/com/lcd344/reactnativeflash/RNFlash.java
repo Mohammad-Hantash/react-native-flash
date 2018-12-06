@@ -63,6 +63,12 @@ public class RNFlash extends ReactContextBaseJavaModule {
 			return;
 		}
 
+		try {
+			mCamera.getParameters();
+		}catch(Exception e){
+			mCamera = Camera.open();
+		} 
+		
 		params = mCamera.getParameters();
 		params.setFlashMode(Parameters.FLASH_MODE_TORCH);
 		mCamera.setParameters(params);
@@ -79,6 +85,12 @@ public class RNFlash extends ReactContextBaseJavaModule {
 			return;
 		}
 
+		try {
+			mCamera.getParameters();
+		}catch(Exception e){
+			mCamera = Camera.open();
+		} 
+		
 		params = mCamera.getParameters();
 		params.setFlashMode(Parameters.FLASH_MODE_OFF);
 		mCamera.setParameters(params);
