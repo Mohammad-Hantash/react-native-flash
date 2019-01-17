@@ -99,7 +99,9 @@ public class RNFlash extends ReactContextBaseJavaModule {
 
 	@ReactMethod
 	public void hasFlash(Callback successCallback, Callback errorCallback) {
-
+		if(mCamera == null){
+			mCamera = getCamera();
+		}
 		if (mReactContext.getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
 			successCallback.invoke();
 		} else {
